@@ -13,7 +13,7 @@ import utilities.ExcelUtility;
 public class ManageNewsTest extends TestNGBase {
 	
 	
-	@Test
+	@Test(description="Verifying whether User is able to add New News")
 	public void verifyWhetherUserIsAbleToAddNewNewsSuccessfully() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -24,15 +24,18 @@ public class ManageNewsTest extends TestNGBase {
 		
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnManageNewsButton();
+		
 		ManageNewsPage manageNews = new ManageNewsPage(driver);
 		
 		manageNews.clickOnNewButton();
-		manageNews.enterNews();
+		
+		String news = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
+		manageNews.enterNews(news);
 		manageNews.clickOnSaveButton();
 		
 	}
 	
-	@Test
+	@Test(description="Verifying whether User is able to Search the News")
 	public void verifyWhetherUserIsAbleToSearchNewlyAddedNews() throws IOException {
 		
 		String usernamevalue = ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -45,14 +48,18 @@ public class ManageNewsTest extends TestNGBase {
 		
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnManageNewsButton();
+		
+		String news = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
 		ManageNewsPage manageNews = new ManageNewsPage(driver);
 		
 		manageNews.clickOnSearchButton();
-		manageNews.enterNewsInSearchBox();
+		
+		
+		manageNews.enterNewsInSearchBox(news);
 		manageNews.clickOnVerifyingSearchButton();
 	}
 	
-	@Test
+	@Test(description="Verifying whether User is able to Manage the Reset Button")
 	public void verifyUserIsAbleToManageReset() throws IOException {
 		
 		verifyWhetherUserIsAbleToSearchNewlyAddedNews();

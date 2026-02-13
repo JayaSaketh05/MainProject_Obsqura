@@ -34,8 +34,8 @@ public WebDriver driver;
 		newButton.click();
 	}
 	
-	public void enterNews() {
-		newsBox.sendKeys("Sample News");
+	public void enterNews(String news) {
+		newsBox.sendKeys(news);
 	}
 	
 	public void clickOnSaveButton() {
@@ -47,8 +47,8 @@ public WebDriver driver;
 		searchButtonOne.click();
 	}
 	
-	public void enterNewsInSearchBox() {
-		searchTextBox.sendKeys("Sample News");
+	public void enterNewsInSearchBox(String news) {
+		searchTextBox.sendKeys(news);
 	}
 	
 	public void clickOnVerifyingSearchButton() {

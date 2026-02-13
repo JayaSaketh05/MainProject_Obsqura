@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class HomeTest extends TestNGBase {
 	
-	@Test
+	@Test(retryAnalyzer = retry.RetryMechanism.class,description="Verifying whether User is able to Logout successfully")
 	public void verifyWhetherUserisAbletoLogoutSuccessfully() throws IOException {
 	
 	String usernamevalue = ExcelUtility.getStringData(0, 0, "LoginPage");

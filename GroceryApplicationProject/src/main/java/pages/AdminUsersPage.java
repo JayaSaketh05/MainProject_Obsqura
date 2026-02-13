@@ -39,12 +39,12 @@ public WebDriver driver;
 		select.selectByValue("admin");
 	}
 	
-	public void enterNewUsername() {
-		usernameBox1.sendKeys("Jaya Saketh");
+	public void enterNewUsername(String newusername) {
+		usernameBox1.sendKeys(newusername);  // replace with excelRead
 	}
 	
-	public void enterPassword() {
-		passwordBox.sendKeys("Obsqura");
+	public void enterPassword(String newpassword) {
+		passwordBox.sendKeys(newpassword);
 	}
 	
 	public void clickOnSaveButton() {
@@ -55,8 +55,8 @@ public WebDriver driver;
 		searchMainButton.click();
 	}
 	
-	public void enterUsername() {
-		usernameBox2.sendKeys("Jaya Saketh");
+	public void enterUsername(String username) {
+		usernameBox2.sendKeys(username);
 	}
 	
 	public void selectUserType() {
