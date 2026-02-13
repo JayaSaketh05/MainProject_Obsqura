@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 12 10:44:12 IST 2026</td>
+<td>Started on:</td><td>Fri Feb 13 09:56:57 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30352 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15960 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,132 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testscripts.LoginTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-	at testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword(LoginTest.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace248050873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace248050873'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-	at testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword(LoginTest.java:44)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>testscripts.LoginTest@5dcb4f5f</td></tr>
-<tr>
-<td title='testscripts.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()'><b>verifyUserLoginWithValidUsernameAndInvalidPassword</b><br>Test class: testscripts.LoginTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-	at testscripts.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword(LoginTest.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1593245055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1593245055'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-	at testscripts.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword(LoginTest.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>testscripts.LoginTest@5dcb4f5f</td></tr>
-<tr>
-<td title='testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testscripts.LoginTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-	at testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword(LoginTest.java:57)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace505323251", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace505323251'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-	at testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword(LoginTest.java:57)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>testscripts.LoginTest@5dcb4f5f</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -202,10 +76,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testscripts.LoginTest<br>Test method: Validating Userlogin with Invalid Username & Valid Password</td>
+<td></td>
+<td>0</td>
+<td>testscripts.LoginTest@53de625d</td></tr>
+<tr>
 <td title='testscripts.LoginTest.verifyUserLoginWithValidCredentials()'><b>verifyUserLoginWithValidCredentials</b><br>Test class: testscripts.LoginTest<br>Test method: Validating Userlogin with valid credentials</td>
 <td></td>
-<td>3</td>
-<td>testscripts.LoginTest@5dcb4f5f</td></tr>
+<td>1</td>
+<td>testscripts.LoginTest@53de625d</td></tr>
+<tr>
+<td title='testscripts.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()'><b>verifyUserLoginWithValidUsernameAndInvalidPassword</b><br>Test class: testscripts.LoginTest<br>Test method: Validating Userlogin with valid Username & Invalid Password</td>
+<td></td>
+<td>0</td>
+<td>testscripts.LoginTest@53de625d</td></tr>
+<tr>
+<td title='testscripts.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testscripts.LoginTest<br>Test method: Validating Userlogin with Invalid credentials</td>
+<td></td>
+<td>0</td>
+<td>testscripts.LoginTest@53de625d</td></tr>
 </table><p>
 </body>
 </html>

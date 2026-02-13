@@ -20,7 +20,6 @@ public class ExcelUtility {
 		f=new FileInputStream("C:\\Users\\Jaya Saketh\\git\\MainProject_Obsqura\\GroceryApplicationProject\\src\\test\\resources\\TestData.xlsx");
 		w=new XSSFWorkbook(f);
 		s=w.getSheet(sheet);
-		System.out.println("Total sheets: " + w.getNumberOfSheets());   
 		XSSFRow r=s.getRow(a);
 		XSSFCell c=r.getCell(b);
 		return c.getStringCellValue(); //inbuilt method for excelsheet connection
