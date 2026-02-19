@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-13T10:08:40 IST" name="Default suite" finished-at="2026-02-13T10:08:44 IST" duration-ms="3491">
+  <suite started-at="2026-02-19T23:55:51 IST" name="Default suite" finished-at="2026-02-19T23:55:58 IST" duration-ms="6927">
     <groups>
     </groups>
-    <test started-at="2026-02-13T10:08:40 IST" name="Default test" finished-at="2026-02-13T10:08:44 IST" duration-ms="3491">
-      <class name="testscripts.ManageNewsTest">
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscripts.ManageNewsTest@79e4c792]" started-at="2026-02-13T10:08:41 IST" name="initialiseBrowser" description="Verifying whether Browser is initialized successfully" finished-at="2026-02-13T10:08:42 IST" duration-ms="1642" status="PASS">
+    <test started-at="2026-02-19T23:55:51 IST" name="Default test" finished-at="2026-02-19T23:55:58 IST" duration-ms="6927">
+      <class name="testscripts.AdminUsersTest">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@7b2bbc3]" started-at="2026-02-19T23:55:51 IST" name="initialiseBrowser" description="Verifying whether Browser is initialized successfully" finished-at="2026-02-19T23:55:53 IST" duration-ms="2508" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyUserIsAbleToManageReset()[pri:0, instance:testscripts.ManageNewsTest@79e4c792]" started-at="2026-02-13T10:08:42 IST" name="verifyUserIsAbleToManageReset" description="Verifying whether User is able to Manage the Reset Button" finished-at="2026-02-13T10:08:44 IST" duration-ms="1787" status="PASS">
+        <test-method signature="verifyWhetherUserIsAbleToAddNewUserSuccessfully()[pri:0, instance:testscripts.AdminUsersTest@7b2bbc3]" started-at="2026-02-19T23:55:53 IST" name="verifyWhetherUserIsAbleToAddNewUserSuccessfully" description="Verifying whether User is able to Add New User successfully" finished-at="2026-02-19T23:55:58 IST" duration-ms="4358" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToManageReset -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageNewsTest@79e4c792]" started-at="2026-02-13T10:08:44 IST" name="driverQuit" finished-at="2026-02-13T10:08:44 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyWhetherUserIsAbleToAddNewUserSuccessfully -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@7b2bbc3]" started-at="2026-02-19T23:55:58 IST" name="driverQuit" finished-at="2026-02-19T23:55:58 IST" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToManageReset status=SUCCESS method=ManageNewsTest.verifyUserIsAbleToManageReset()[pri:0, instance:testscripts.ManageNewsTest@79e4c792] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToAddNewUserSuccessfully status=SUCCESS method=AdminUsersTest.verifyWhetherUserIsAbleToAddNewUserSuccessfully()[pri:0, instance:testscripts.AdminUsersTest@7b2bbc3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.ManageNewsTest -->
+      </class> <!-- testscripts.AdminUsersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

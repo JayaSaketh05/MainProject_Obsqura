@@ -18,18 +18,33 @@ public class LoginPage {
 	@FindBy(xpath="//input[@placeholder='Username']")WebElement username;
 	@FindBy(xpath="//input[@placeholder='Password']")WebElement password;
 	@FindBy(xpath="//button[@type='submit']")WebElement loginButton;
+	@FindBy(xpath="//p[text()='Dashboard']")WebElement dashboardTile;
+	@FindBy(xpath="//b[text()='7rmart supermarket']")WebElement loginText;
 	
 	
-	public void enterUsernameOnUsernameField(String usernamevalue) {
+	public LoginPage enterUsernameOnUsernameField(String usernamevalue) {
 		username.sendKeys(usernamevalue);
+		return this;
 	}
 	
-	public void enterPasswordOnPasswordField(String passwordvalue) {
+	public LoginPage enterPasswordOnPasswordField(String passwordvalue) {
 		password.sendKeys(passwordvalue);
+		return this;
 	}
 	
-	public void clickOnLoginButton() {
+	public HomePage clickOnLoginButton() {
 		loginButton.click();
+		return new HomePage(driver);
 	}
+	
+	public boolean isDashboardDisplayed() {
+		return dashboardTile.isDisplayed();
+	}
+	
+	public String dashboardText() {
+		return loginText.getText();
+	}
+	
+	
 
 }

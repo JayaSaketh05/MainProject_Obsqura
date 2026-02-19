@@ -6,9 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import constants.Constants;
+import utilities.PageUtility;
+
 public class AdminUsersPage {
 	
 public WebDriver driver;
+
+PageUtility page = new PageUtility();
 	
 	public AdminUsersPage(WebDriver driver) {
 		
@@ -29,47 +34,72 @@ public WebDriver driver;
 	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement resetButton;
 	
+	@FindBy(xpath="//div[contains(@class,'alert-success')]") WebElement loginAlert;
 	
-	public void clickOnNewButton() {
+	public AdminUsersPage clickOnNewButton() {
 		newButton.click();
+		return this;
 	}
 	
-	public void selectNewUserType() {
-		Select select = new Select(userTypeDropdown1);
+	public AdminUsersPage selectNewUserType() {
+		
+		page.selectDropDownWithVisibleText(userTypeDropdown1, Constants.DROPDOWNVALUE1);
+		return this;
+		
+	/*	Select select = new Select(userTypeDropdown1);
 		select.selectByValue("admin");
+		return this;
+	*/
 	}
 	
-	public void enterNewUsername(String newusername) {
-		usernameBox1.sendKeys(newusername);  // replace with excelRead
+	public AdminUsersPage enterNewUsername(String newusername) {
+		usernameBox1.sendKeys(newusername);
+		return this;
 	}
 	
-	public void enterPassword(String newpassword) {
+	public AdminUsersPage enterPassword(String newpassword) {
 		passwordBox.sendKeys(newpassword);
+		return this;
 	}
 	
-	public void clickOnSaveButton() {
+	public AdminUsersPage clickOnSaveButton() {
 		saveButton.click();
+		return this;
 	}
 	
-	public void clickOnMainSearchButton() {
+	public AdminUsersPage clickOnMainSearchButton() {
 		searchMainButton.click();
+		return this;
 	}
 	
-	public void enterUsername(String username) {
+	public AdminUsersPage enterUsername(String username) {
 		usernameBox2.sendKeys(username);
+		return this;
 	}
 	
-	public void selectUserType() {
-		Select select = new Select(userTypeDropdown2);
+	public AdminUsersPage selectUserType() {
+		
+		page.selectDropDownWithVisibleText(userTypeDropdown2, Constants.DROPDOWNVALUE1);
+		
+	/*	Select select = new Select(userTypeDropdown2);
 		select.selectByVisibleText("Admin");
+	*/
+		return this;
 	}
 	
-	public void clickOnSearchButtonToFind() {
+	public AdminUsersPage clickOnSearchButtonToFind() {
 		searchFinalButton.click();
+		return this;
 	}
 	
-	public void clickOnResetButton() {
+	public AdminUsersPage clickOnResetButton() {
 		resetButton.click();
+		return this;
 	}
+	
+	public boolean isUserCreatedSuccessfully() {
+	    return loginAlert.getText().contains(Constants.ADMINCREATEDALERT);
+	}
+	
 
 }

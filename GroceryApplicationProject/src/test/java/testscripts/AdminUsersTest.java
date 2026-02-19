@@ -2,6 +2,7 @@ package testscripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.TestNGBase;
@@ -9,7 +10,7 @@ import pages.AdminUsersPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
-import utilities.FakerUtility;
+// import utilities.FakerUtility;
 
 public class AdminUsersTest extends TestNGBase {
 	
@@ -29,15 +30,20 @@ public class AdminUsersTest extends TestNGBase {
 		AdminUsersPage adminUsers = new AdminUsersPage(driver);
 		
 		adminUsers.clickOnNewButton();
-		FakerUtility faker = new FakerUtility();
 		
-		
+	/*	FakerUtility faker = new FakerUtility();
 		String newusername = faker.createRandomUsername();
 		String newpassword = faker.createRandomPassword();
+	*/
+		
+		String newusername = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
+		String newpassword = ExcelUtility.getStringData(0, 1, "AdminUsersPage");
 		adminUsers.enterNewUsername(newusername);
 		adminUsers.enterPassword(newpassword);
 		adminUsers.selectNewUserType();
 		adminUsers.clickOnSaveButton();
+		
+		Assert.assertTrue(adminUsers.isUserCreatedSuccessfully(),"User is not created successfully");
 	}
 	
 	@Test(description="Verifying whether User is able to Search the Admin details")

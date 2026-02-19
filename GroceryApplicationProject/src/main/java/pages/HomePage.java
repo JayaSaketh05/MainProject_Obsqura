@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.WaitUtility;
+
 public class HomePage {
 	
 	public WebDriver driver;
-	
+	WaitUtility wait = new WaitUtility();
 	public HomePage(WebDriver driver) {
 		
 		this.driver = driver;
@@ -20,20 +22,25 @@ public class HomePage {
 	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'])[2]")WebElement manageNewsButton;
 	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin'])[2]")WebElement adminUsersButton;
 	
-	public void cliclonAdminLogoutIcon() {
+	public HomePage cliclonAdminLogoutIcon() {
 		adminLogoutIcon.click();
+		return this;
 	}
 	
-	public void cliclonLogoutButton() {
+	public LoginPage cliclonLogoutButton() {
+		wait.waitUntilElementToBeClickable(driver,logoutButton);
 		logoutButton.click();
+		return new LoginPage(driver);
 	}
 	
-	public void clickOnManageNewsButton() {
+	public ManageNewsPage clickOnManageNewsButton() {
 		manageNewsButton.click();
+		return new ManageNewsPage(driver);
 	}
 	
-	public void clickOnAdminUsersButton() {
+	public AdminUsersPage clickOnAdminUsersButton() {
 		adminUsersButton.click();
+		return new AdminUsersPage(driver);
 	}
 	
 	
