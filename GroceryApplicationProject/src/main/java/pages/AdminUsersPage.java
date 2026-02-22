@@ -36,6 +36,8 @@ PageUtility page = new PageUtility();
 	
 	@FindBy(xpath="//div[contains(@class,'alert-success')]") WebElement loginAlert;
 	
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']")WebElement adminSearch;
+	
 	public AdminUsersPage clickOnNewButton() {
 		newButton.click();
 		return this;
@@ -43,7 +45,7 @@ PageUtility page = new PageUtility();
 	
 	public AdminUsersPage selectNewUserType() {
 		
-		page.selectDropDownWithVisibleText(userTypeDropdown1, Constants.DROPDOWNVALUE1);
+		page.selectDropDownByVisibleText(userTypeDropdown1, Constants.DROPDOWNVALUE1);
 		return this;
 		
 	/*	Select select = new Select(userTypeDropdown1);
@@ -79,12 +81,13 @@ PageUtility page = new PageUtility();
 	
 	public AdminUsersPage selectUserType() {
 		
-		page.selectDropDownWithVisibleText(userTypeDropdown2, Constants.DROPDOWNVALUE1);
+		page.selectDropDownByVisibleText(userTypeDropdown2, Constants.DROPDOWNVALUE1);
+		return this;
 		
 	/*	Select select = new Select(userTypeDropdown2);
 		select.selectByVisibleText("Admin");
 	*/
-		return this;
+		
 	}
 	
 	public AdminUsersPage clickOnSearchButtonToFind() {
@@ -99,6 +102,14 @@ PageUtility page = new PageUtility();
 	
 	public boolean isUserCreatedSuccessfully() {
 	    return loginAlert.getText().contains(Constants.ADMINCREATEDALERT);
+	}
+	
+	public boolean isUserAbleToSearchAdmin() {
+		return adminSearch.getText().contains(Constants.ADMINNOTFOUNDERROR);
+	}
+	
+	public boolean isResetButtonClickable() {
+		return resetButton.getText().contains(Constants.RESET);
 	}
 	
 

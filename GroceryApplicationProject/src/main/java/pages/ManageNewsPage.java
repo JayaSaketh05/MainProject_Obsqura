@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constants.Constants;
+
 public class ManageNewsPage {
 	
 public WebDriver driver;
@@ -27,36 +29,62 @@ public WebDriver driver;
 	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement resetButton;
 	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement newsCreatedAlert;
+	
+	@FindBy(id="res")WebElement newsSearch;
+	
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement newsResetButton;
 	
 	
 	
-	public void clickOnNewButton() {
+	
+	public ManageNewsPage clickOnNewButton() {
 		newButton.click();
+		return this;
 	}
 	
-	public void enterNews(String news) {
+	public ManageNewsPage enterNews(String news) {
 		newsBox.sendKeys(news);
+		return this;
 	}
 	
-	public void clickOnSaveButton() {
+	public ManageNewsPage clickOnSaveButton() {
 		saveButton.click();
+		return this;
 	}
 
 	
-	public void clickOnSearchButton() {
+	public ManageNewsPage clickOnSearchButton() {
 		searchButtonOne.click();
+		return this;
 	}
 	
-	public void enterNewsInSearchBox(String news) {
+	public ManageNewsPage enterNewsInSearchBox(String news) {
 		searchTextBox.sendKeys(news);
+		return this;
 	}
 	
-	public void clickOnVerifyingSearchButton() {
+	public ManageNewsPage clickOnVerifyingSearchButton() {
 		searchButtonTwo.click();
+		return this;
 	}
 	
-	public void clickOnResetButton() {
+	public ManageNewsPage clickOnResetButton() {
 		resetButton.click();
+		return this;
 	}
+	
+	public boolean isNewsAddedSuccessfully() {
+	    return newsCreatedAlert.getText().contains(Constants.NEWSADDEDALERT);
+	}
+	
+	public boolean isUserAbleToSearchNews() {
+		return newsSearch.getText().contains(Constants.NEWSNOTFOUNDERROR);
+	}
+	
+	public boolean isNewsResetButtonClickable() {
+		return newsResetButton.getText().contains(Constants.NEWSRESET);
+	}
+	
 
 }

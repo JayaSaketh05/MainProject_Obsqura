@@ -2,9 +2,11 @@ package testscripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.TestNGBase;
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
@@ -33,6 +35,8 @@ public class ManageNewsTest extends TestNGBase {
 		manageNews.enterNews(news);
 		manageNews.clickOnSaveButton();
 		
+		Assert.assertTrue(manageNews.isNewsAddedSuccessfully(), Constants.NEWSNOTADDEDALERT);
+		
 	}
 	
 	@Test(description="Verifying whether User is able to Search the News")
@@ -57,6 +61,8 @@ public class ManageNewsTest extends TestNGBase {
 		
 		manageNews.enterNewsInSearchBox(news);
 		manageNews.clickOnVerifyingSearchButton();
+		
+		Assert.assertFalse(!manageNews.isUserAbleToSearchNews(), Constants.NEWSFOUND);
 	}
 	
 	@Test(description="Verifying whether User is able to Manage the Reset Button")
@@ -65,6 +71,8 @@ public class ManageNewsTest extends TestNGBase {
 		verifyWhetherUserIsAbleToSearchNewlyAddedNews();
 		ManageNewsPage manageNews = new ManageNewsPage(driver);
 		manageNews.clickOnResetButton();
+		
+		Assert.assertTrue(manageNews.isNewsResetButtonClickable(), Constants.NEWSRESETISDISABLED);
 		
 	}
 

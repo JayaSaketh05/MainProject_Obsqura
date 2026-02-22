@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.TestNGBase;
+import constants.Constants;
 import pages.AdminUsersPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -43,7 +44,8 @@ public class AdminUsersTest extends TestNGBase {
 		adminUsers.selectNewUserType();
 		adminUsers.clickOnSaveButton();
 		
-		Assert.assertTrue(adminUsers.isUserCreatedSuccessfully(),"User is not created successfully");
+		Assert.assertTrue(adminUsers.isUserCreatedSuccessfully(), Constants.ADMINNOTCREATEDALERT);
+		
 	}
 	
 	@Test(description="Verifying whether User is able to Search the Admin details")
@@ -67,13 +69,30 @@ public class AdminUsersTest extends TestNGBase {
 		adminUsers.enterUsername(username);
 		adminUsers.selectUserType();
 		adminUsers.clickOnSearchButtonToFind();
+		
+		Assert.assertFalse(!adminUsers.isUserAbleToSearchAdmin(), Constants.ADMINFOUND);
+		
 	}
 	
 	@Test(description="Verifying whether Reset button is working successfully")
 	public void verifyWhetherResetButtonIsWorking() throws IOException {
-		verifyWhetherUserIsAbleToSearchNewlyAddedAdmin();
+		
+		String usernamevalue = ExcelUtility.getStringData(0, 0, "LoginPage");
+		String passwordvalue = ExcelUtility.getStringData(0, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(usernamevalue);
+		login.enterPasswordOnPasswordField(passwordvalue);
+		login.clickOnLoginButton();
+		
+		HomePage homePage = new HomePage(driver);
+		homePage.clickOnAdminUsersButton();
+		
 		AdminUsersPage adminUsers = new AdminUsersPage(driver);
 		adminUsers.clickOnResetButton();
+		
+		
+		Assert.assertTrue(adminUsers.isResetButtonClickable(), Constants.RESETISDISABLED);
+		
 	}
 	
 }

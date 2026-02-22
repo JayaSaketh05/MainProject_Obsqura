@@ -17,10 +17,16 @@ public class PageUtility {
 		object.deselectAll();
 	}
 	
-	public void selectDropDownWithVisibleText(WebElement element, String value) {
+	public void selectDropDownByVisibleText(WebElement element, String value) {
 		
 		Select object = new Select(element);
 		object.selectByVisibleText(value);
+	}
+	
+	public void deselectDropDownByVisibleText(WebElement element, String value) {
+	    
+	    Select object = new Select(element);
+	    object.deselectByVisibleText(value);
 	}
 	
 	public void selectDropDownByIndex(WebElement element, int index) {
@@ -28,8 +34,11 @@ public class PageUtility {
 		object.selectByIndex(index);
 	}
 	
+	public boolean isMultiple(WebElement element) {
+	    
+	    Select object = new Select(element);
+	    return object.isMultiple();
+	}
 	
 	
-	
-
 }
