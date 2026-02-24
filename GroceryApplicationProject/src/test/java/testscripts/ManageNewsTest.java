@@ -28,12 +28,9 @@ public class ManageNewsTest extends TestNGBase {
 		homePage.clickOnManageNewsButton();
 		
 		ManageNewsPage manageNews = new ManageNewsPage(driver);
-		
-		manageNews.clickOnNewButton();
-		
 		String news = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
-		manageNews.enterNews(news);
-		manageNews.clickOnSaveButton();
+		
+		manageNews.clickOnNewButton().enterNews(news).clickOnSaveButton();
 		
 		Assert.assertTrue(manageNews.isNewsAddedSuccessfully(), Constants.NEWSNOTADDEDALERT);
 		
@@ -56,11 +53,7 @@ public class ManageNewsTest extends TestNGBase {
 		String news = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
 		ManageNewsPage manageNews = new ManageNewsPage(driver);
 		
-		manageNews.clickOnSearchButton();
-		
-		
-		manageNews.enterNewsInSearchBox(news);
-		manageNews.clickOnVerifyingSearchButton();
+		manageNews.clickOnSearchButton().enterNewsInSearchBox(news).clickOnVerifyingSearchButton();
 		
 		Assert.assertFalse(!manageNews.isUserAbleToSearchNews(), Constants.NEWSFOUND);
 	}

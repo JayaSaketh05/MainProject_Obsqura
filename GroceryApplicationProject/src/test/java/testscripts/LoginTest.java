@@ -30,9 +30,7 @@ public class LoginTest extends TestNGBase {
 		boolean dashboardDisplay = login.isDashboardDisplayed();
 		Assert.assertTrue(dashboardDisplay, Constants.VALIDCREDENTIALERROR);
 		// Assert.assertFalse(!dashboardDisplay, Constants.VALIDCREDENTIALERROR);
-		
-		
-	
+
 	}
 	
 	
@@ -47,9 +45,7 @@ public class LoginTest extends TestNGBase {
 		String expected = "7rmart supermarket";
 		String actual = login.dashboardText();
 		Assert.assertEquals(expected, actual, Constants.INVALIDPASSWORDERROR);
-		
-		
-		
+
 	}
 	
 	
@@ -64,7 +60,6 @@ public class LoginTest extends TestNGBase {
 		String expected = "7rmart supermarket";
 		String actual = login.dashboardText();
 		Assert.assertEquals(expected, actual, Constants.INVALIDUSERNAMEERROR);
-		
 		
 	}
 	
@@ -82,8 +77,7 @@ public class LoginTest extends TestNGBase {
 		String expected = "7rmart supermarket";
 		String actual = login.dashboardText();
 		Assert.assertEquals(expected, actual, Constants.INVALIDCREDENTIALSERROR);
-		
-		
+	
 	}
 	
 	 @DataProvider(name = "loginProvider") 

@@ -39,10 +39,7 @@ public class AdminUsersTest extends TestNGBase {
 		
 		String newusername = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
 		String newpassword = ExcelUtility.getStringData(0, 1, "AdminUsersPage");
-		adminUsers.enterNewUsername(newusername);
-		adminUsers.enterPassword(newpassword);
-		adminUsers.selectNewUserType();
-		adminUsers.clickOnSaveButton();
+		adminUsers.enterNewUsername(newusername).enterPassword(newpassword).selectNewUserType().clickOnSaveButton();
 		
 		Assert.assertTrue(adminUsers.isUserCreatedSuccessfully(), Constants.ADMINNOTCREATEDALERT);
 		
@@ -66,9 +63,7 @@ public class AdminUsersTest extends TestNGBase {
 		adminUsers.clickOnMainSearchButton();
 		
 		String username = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
-		adminUsers.enterUsername(username);
-		adminUsers.selectUserType();
-		adminUsers.clickOnSearchButtonToFind();
+		adminUsers.enterUsername(username).selectUserType().clickOnSearchButtonToFind();
 		
 		Assert.assertFalse(!adminUsers.isUserAbleToSearchAdmin(), Constants.ADMINFOUND);
 		
